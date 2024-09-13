@@ -9,6 +9,12 @@ runs:
       with:
         python-version: 3.12
 
+    - name: Set GitHub Path
+      run: echo "$GITHUB_ACTION_PATH" >> $GITHUB_PATH
+      shell: bash
+      env:
+        GITHUB_ACTION_PATH: ${{ github.action_path }}
+
     - name: Run Python script
       run: python dco_check.py
       shell: bash
