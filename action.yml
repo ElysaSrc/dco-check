@@ -9,9 +9,6 @@ runs:
       with:
         python-version: 3.12
 
-    - name: Checkout code
-      uses: actions/checkout@v4
-
     - name: Run Python script
       run: python dco_check.py
       shell: bash
